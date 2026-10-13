@@ -1,0 +1,8 @@
+{
+  "name": "RythuRaksha AI",
+  "description": "Climate-Smart Crop Insurance & Loan Assistant with satellite NDVI, historical weather, and multilingual support.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

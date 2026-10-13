@@ -5,7 +5,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = (import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = (import.meta as any).env?.VITE_API_BASE_URL || '';
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
@@ -105,8 +105,10 @@ export interface CaseRecord {
   farmer_name: string;
   farmer_name_te?: string;
   village: string;
+  mandal?: string;
   district: string;
   survey_no: string;
+  pattadar_passbook?: string;
   area_acres: number;
   crop: string;
   weather_event: string;
@@ -135,6 +137,21 @@ export interface CaseRecord {
   reviewer_comments: string | null;
   created_at: string;
   updated_at: string;
+  audit_trail?: Array<{
+    id: string;
+    timestamp: string;
+    actor: 'Farmer' | 'Bank Officer' | 'Agent 1' | 'Agent 2' | 'System';
+    action: string;
+    details: string;
+  }>;
+}
+
+export interface AuditEvent {
+  id: string;
+  timestamp: string;
+  actor: 'Farmer' | 'Bank Officer' | 'Agent 1' | 'Agent 2' | 'System';
+  action: string;
+  details: string;
 }
 
 export interface CasesResponse {
@@ -257,6 +274,26 @@ export async function askTeluguAssistant(
   return res.data;
 }
 
+export async function updateClaimDraft(
+  case_id: string,
+  ai_draft: string,
+  document_type?: 'INSURANCE_CLAIM' | 'LOAN_RELIEF'
+): Promise<{ message: string; case: CaseRecord }> {
+  const res = await apiClient.put(`/api/claims/${case_id}/draft`, {
+    ai_draft,
+    document_type,
+  });
+  return res.data;
+}
+
+export async function fetchAuditTrail(
+  case_id: string
+): Promise<{ case_id: string; audit_trail: AuditEvent[] }> {
+  const res = await apiClient.get(`/api/cases/${case_id}/audit`);
+  return res.data;
+}
+
 export function getClaimPdfUrl(case_id: string): string {
   return `${API_BASE_URL}/api/claims/${case_id}/pdf`;
 }
+

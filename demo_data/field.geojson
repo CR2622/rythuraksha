@@ -1,0 +1,129 @@
+{
+  "type": "FeatureCollection",
+  "name": "rythuraksha_telangana_demo_fields",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "FIELD001",
+      "properties": {
+        "field_id": "FIELD001",
+        "farmer_id": "FARMER-TS-001",
+        "farmer_name": "B. Ramesh Goud",
+        "farmer_name_te": "బి. రమేష్ గౌడ్",
+        "village": "Duggondi",
+        "mandal": "Narsampet",
+        "district": "Warangal, Telangana",
+        "survey_no": "SY-114/A",
+        "pattadar_passbook": "PPB-TS-8841209",
+        "crop": "Paddy",
+        "crop_variety": "Telangana Sona (RNR-15048)",
+        "crop_te": "వరి (తెలంగాణ సోనా)",
+        "area_acres": 4.2,
+        "lat": 17.9689,
+        "lon": 79.5941,
+        "center": [17.9689, 79.5941],
+        "historical_event": "Heavy rainfall",
+        "default_event_date": "2024-09-01",
+        "default_start_date": "2024-08-28",
+        "default_end_date": "2024-09-06",
+        "satellite_available": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [79.5922, 17.9704],
+            [79.5960, 17.9704],
+            [79.5960, 17.9674],
+            [79.5922, 17.9674],
+            [79.5922, 17.9704]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "FIELD002",
+      "properties": {
+        "field_id": "FIELD002",
+        "farmer_id": "FARMER-TS-002",
+        "farmer_name": "K. Padmavathi",
+        "farmer_name_te": "కె. పద్మావతి",
+        "village": "palair",
+        "mandal": "Kusumanchi",
+        "district": "Khammam, Telangana",
+        "survey_no": "SY-308/2B",
+        "pattadar_passbook": "PPB-TS-4419082",
+        "crop": "Chilli",
+        "crop_variety": "Teja Hybrid",
+        "crop_te": "మిర్చి (తేజ హైబ్రిడ్)",
+        "area_acres": 3.0,
+        "lat": 17.2473,
+        "lon": 80.1514,
+        "center": [17.2473, 80.1514],
+        "historical_event": "Flood & Extreme Monsoon Downpour",
+        "default_event_date": "2024-09-01",
+        "default_start_date": "2024-08-28",
+        "default_end_date": "2024-09-06",
+        "satellite_available": true
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [80.1496, 17.2488],
+            [80.1532, 17.2488],
+            [80.1532, 17.2458],
+            [80.1496, 17.2458],
+            [80.1496, 17.2488]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "FIELD003",
+      "properties": {
+        "field_id": "FIELD003",
+        "farmer_id": "FARMER-TS-003",
+        "farmer_name": "M. Narasimha Rao",
+        "farmer_name_te": "ఎం. నరసింహ రావు",
+        "village": "Miryalaguda Rural",
+        "mandal": "Miryalaguda",
+        "district": "Nalgonda, Telangana",
+        "survey_no": "SY-77/1C",
+        "pattadar_passbook": "PPB-TS-6620194",
+        "crop": "Cotton",
+        "crop_variety": "Bt Hybrid",
+        "crop_te": "పత్తి (బీటీ హైబ్రిడ్)",
+        "area_acres": 5.5,
+        "lat": 16.8722,
+        "lon": 79.5625,
+        "center": [16.8722, 79.5625],
+        "historical_event": "Unseasonal Heavy Rainfall",
+        "default_event_date": "2024-09-02",
+        "default_start_date": "2024-08-28",
+        "default_end_date": "2024-09-06",
+        "satellite_available": false
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [79.5605, 16.8738],
+            [79.5645, 16.8738],
+            [79.5645, 16.8706],
+            [79.5605, 16.8706],
+            [79.5605, 16.8738]
+          ]
+        ]
+      }
+    }
+  ]
+}
